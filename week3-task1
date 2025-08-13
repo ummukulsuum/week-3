@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+
+class Len extends StatefulWidget {
+  const Len({super.key});
+
+  @override
+  State<Len> createState() => _LenState();
+}
+
+class _LenState extends State<Len> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Stack(
+          alignment: AlignmentDirectional.center,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color.fromARGB(255, 79, 67, 67),
+                    blurRadius: 30,
+                    offset: Offset(14, 14),
+                  ),
+                ],
+                shape: BoxShape.rectangle,
+                color: Colors.blueGrey,
+              ),
+              height: 360,
+              width: 360,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color.fromARGB(255, 159, 195, 213),
+              ),
+              height: 300,
+              width: 300,
+            ),
+            SizedBox(
+              height: 260,
+              width: 260,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(180),
+                child: Image.network(
+                  "https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcar-images%2Fbig%2Fbmw%2Fm5%2Fbmw-m5.jpg%3Fv%3D13&w=1920&q=75",
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
