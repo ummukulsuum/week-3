@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+class Len extends StatefulWidget {
+  const Len({super.key});
+
+  @override
+  State<Len> createState() => _LenState();
+}
+
+class _LenState extends State<Len> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+ body: Column(
+        children: [
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.all(15),
+              child: Container(
+                color: Colors.amber,
+              ),
+            ),
+          ),
+          Flexible(
+            flex:1,
+            child: Container(
+              color: const Color.fromARGB(255, 122, 112, 83),
+            ),
+          ),
+          Flexible(
+            flex:2,
+            child: Container(
+              color: const Color.fromARGB(255, 52, 39, 1),
+            ),
+          ),
+          Flexible(
+            flex:3,
+            child: Container(
+              color: const Color.fromARGB(255, 194, 183, 152),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
