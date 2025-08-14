@@ -1,0 +1,77 @@
+import 'package:flutter/material.dart';
+
+class Stacked extends StatefulWidget {
+  const Stacked({super.key, required List<Container> children});
+
+  @override
+  State<Stacked> createState() => _StackState();
+}
+
+class _StackState extends State<Stacked> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.home),
+        backgroundColor: Colors.amber,
+        foregroundColor: const Color.fromARGB(255, 4, 78, 6),
+        actions: [Icon(Icons.more_horiz_rounded)],
+      ),
+      body: Center(
+        child: Stack(
+          alignment: AlignmentDirectional.center,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color.fromARGB(255, 4, 78, 6),
+              ),
+              height: 300,
+              width: 300,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color.fromARGB(255, 68, 161, 71),
+              ),
+              height: 250,
+              width: 250,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color.fromARGB(255, 137, 219, 140),
+              ),
+              height: 200,
+              width: 200,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color.fromARGB(255, 164, 248, 164),
+              ),
+              height: 150,
+              width: 150,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color.fromARGB(255, 196, 248, 198),
+              ),
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color.fromARGB(255, 220, 252, 221),
+              ),
+              height: 50,
+              width: 50,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
